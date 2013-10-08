@@ -1,0 +1,9 @@
+table.table
+  thead
+    tr
+      th Assets
+      td Years of experience
+  tbody
+    tr(data-ng-repeat="(name, asset) in assets")
+      td(data-ng-bind="name")
+      td(data-ng-bind="asset.experience")
