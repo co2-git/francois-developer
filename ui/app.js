@@ -1,7 +1,8 @@
 var express = require('express'),
   app = express(),
   http = require('http'),
-  path = require('path');
+  path = require('path'),
+  packagejson = require('../package.json');
 
 // all environments
 app.set('port', + process.env.PORT || 3100);
@@ -37,7 +38,7 @@ app.use(function(err, req, res, next) {
 
 // Routes: INDEX
 app.get('/', function getIndex (req, res) {
-  res.render('layout', {});
+  res.render('layout', { about: packagejson });
 });
 
 // Routes: PARTIALS
