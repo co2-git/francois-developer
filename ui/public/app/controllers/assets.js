@@ -1,14 +1,20 @@
 define(function assetsCtrlAMD () {
   'use strict';
+
+  var asset;
   
   return function assetsCtrl ($scope, $http, $stateParams) {
-    $scope.assets = {};
+    $scope.assets = [];
 
     $scope.getAssets = function getAssets () {
       $http.get('/data/assets.json')
         .success(function (assets) {
           if ( typeof assets === 'object' && assets ) {
-            $scope.assets = assets;
+            for ( var name in assets ) {
+              asset = assets[name];
+              asset.name = name;
+              $scope.assets.push(asset);
+            }
           }
         })
         .error(function (error) {

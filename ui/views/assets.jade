@@ -2,6 +2,10 @@ section.tab-pane#home.active
   header.hero-unit
     h1 Assets
     p
+
+  div.input-append
+    input.span2(type="text", data-ng-model="f.asset", autofocus)
+    button.btn Search
   table.table.table-striped.table-hover
     thead
       tr
@@ -9,8 +13,8 @@ section.tab-pane#home.active
         td Category
         td Years of experience
     tbody
-      tr(data-ng-repeat="(name, asset) in assets")
+      tr(data-ng-repeat="asset in assets | filter:f.asset | orderBy:name ")
         td
-          a(href="/#/assets/{{name}}", data-ng-bind="name")
+          a(href="/#/assets/{{asset.name}}", data-ng-bind="asset.name")
         td(data-ng-bind="asset.category")
         td(data-ng-bind="asset.experience")

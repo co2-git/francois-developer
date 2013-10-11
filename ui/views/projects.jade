@@ -4,13 +4,13 @@ section.tab-pane#home.active
     p
   table.table.table-striped.table-hover
     thead
-        tr
-            th Project
-            td Elevator pitch
-            td Role
+      tr
+        th Project
+        td Elevator pitch
+        td Role
     tbody
       tr(data-ng-repeat="(name, project) in projects")
         td
-            a(href="/#/projects/{{name}}", data-ng-bind="name")
+          a(href="/#/projects/{{name}}", data-ng-bind="name")
         td(data-ng-bind="project.about")
         td(data-ng-bind="project.role")
