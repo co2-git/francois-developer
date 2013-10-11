@@ -1,15 +1,11 @@
 {
   "name": "francois-dev",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "francois@co2.com",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/co2-git/datahop"
-  },
-  "bin": {
-    "francois-dev-start": "./bin/francois-dev-start.js",
-    "francois-dev-install": "./bin/francois-dev-install.sh"
   },
   "main": "main",
   "dependencies": {
