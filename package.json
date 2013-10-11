@@ -8,7 +8,7 @@
     "url": "https://github.com/co2-git/datahop"
   },
   "bin": {
-    "francois-dev": "node bin/francois-dev"
+    "francois-dev": "node bin/francois-dev.js"
     },
   "main": "main",
   "dependencies": {
