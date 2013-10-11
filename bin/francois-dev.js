@@ -1,5 +1,4 @@
-#/bin/bash
-node << NODE
+#!/usr/bin/env node
 switch ( process.argv[2] ) {
 	case undefined:
     console.log('francois-dev');
@@ -7,4 +6,3 @@ switch ( process.argv[2] ) {
   case 'start':
     require('../ui/app');
 }
-NODE
