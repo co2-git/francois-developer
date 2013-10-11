@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/co2-git/datahop"
   },
-  "bin": "node ./bin/francois-dev.js",
+  "bin": "./bin/francois-dev.js",
   "main": "main",
   "dependencies": {
     "express": "3.3.*",
