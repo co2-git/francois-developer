@@ -11,6 +11,8 @@
   "dependencies": {
     "express": "3.3.*",
     "jade": "*",
-    "bower": "1.1.2"
+    "bower": "1.1.2",
+    "validator": "0.4.11",
+    "sendgrid": "latest"
   }
 }

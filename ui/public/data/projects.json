@@ -1,0 +1,50 @@
+{
+	"francois-developer": {
+		"about": "A small HTML5 web app to showcase my skills to recruiters",
+		"role": ["CTO", "Project Manager", "Developer", "Designer"],
+		"type": "personal",
+		"assets": ["nodejs",
+			"express",
+			"jade",
+			"bower",
+			"html5",
+			"javascript",
+			"requirejs",
+			"css3",
+			"angular",
+			"angular-ui",
+			"jquery",
+			"sublime text editor",
+			"github",
+			"git",
+			"bootstrap"]
+	},
+	"immobileaks": {
+		"about": "immobileaks is a french start-up specialized in geo-mapping traditional postal addresses",
+		"role": ["CTO", "Project Manager", "Developer", "Designer"],
+		"assets": ["rackspace cloud",
+			"bash",
+			"nodejs",
+			"express",
+			"bitbucket",
+			"git"]
+	},
+	"apt": {
+		"about": "Dependency manager",
+		"role": ["CTO", "Project Manager", "Developer", "Designer"],
+		"assets": ["nodejs", "git", "github", "eventsjs"]
+	},
+	"datahop": {
+		"about": "Database-agnostic Web GUI",
+		"role": ["CTO", "Project Manager", "Developer", "Designer"],
+		"assets": ["nodejs", "express", "jade", "html5", "javascript", "requirejs",
+			"bower", "css3", "mongodb", "mysql", "sqlite", "angular", "jquery",
+			"git", "github", "events", "bootstrap"]
+	},
+	"undisclosed_1": {
+		"about": "HTML5 game",
+		"role": "Developer",
+		"assets": ["git", "bitbucket", "jquery", "javascript", "html5", "css3", "angular",
+			"jira", "jira agile", "nodejs", "express"]
+	}
+}

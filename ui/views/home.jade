@@ -1,26 +1,16 @@
 section.tab-pane#home.active
-    section.tabbable.tabs-left
-        ul.nav.nav-tabs
-            li(data-ng-class='{ active: $state.includes("home") }')
-                a(href='#home-home', data-toggle='tab') Home
-            li
-                a(href='#home-about', data-toggle='tab') Contact
-        section.tab-content
-            section.tab-pane#home-home(data-ng-class='{ active: $state.includes("home") }')
-                header.hero-unit
-                    p
-                    p Hey! I'm François and I am a freelance web developer based in Barcelona.
-                    p My special is combo 
-                        a(href='#') nodejs
-                        span  
-                        a(href='#') mongodb
-                        span  
-                        a(href='#') angular
-                        span  -- but also a 
-                            a(href='#') bunch of other stuff
-                        span . 
-                    p I am 
-                        a(href='#') free for hire
-                        span . 
-            section.tab-pane#home-about
-                h2 Contact
+    header.hero-unit
+        p
+        p Hey! I'm François and I am a freelance web developer based in Barcelona.
+        p My special is combo 
+            a(href='/#/assets/nodejs') nodejs
+            span  
+            a(href='/#/assets/mongodb') mongodb
+            span  
+            a(href='/#/assets/angular') angular
+            span  -- but also a 
+                a(href='/#/assets') bunch of other stuff
+            span . 
+        p I am 
+            a(href='/#/hire-me') free for hire
+            span . 

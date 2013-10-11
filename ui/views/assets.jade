@@ -1,9 +1,16 @@
-table.table
-  thead
-    tr
-      th Assets
-      td Years of experience
-  tbody
-    tr(data-ng-repeat="(name, asset) in assets")
-      td(data-ng-bind="name")
-      td(data-ng-bind="asset.experience")
+section.tab-pane#home.active
+  header.hero-unit
+    h1 Assets
+    p
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th Assets
+        td Category
+        td Years of experience
+    tbody
+      tr(data-ng-repeat="(name, asset) in assets")
+        td
+          a(href="/#/assets/{{name}}", data-ng-bind="name")
+        td(data-ng-bind="asset.category")
+        td(data-ng-bind="asset.experience")

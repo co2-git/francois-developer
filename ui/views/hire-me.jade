@@ -1,0 +1,67 @@
+section.tab-pane#home.active
+  header.hero-unit
+    h1 
+      span(data-ng-show="lang=='en'") Hire me
+      span(data-ng-show="lang=='fr'") Recrutez-moi
+      span(data-ng-show="lang=='es'") ¡Contratame!
+      span(data-ng-show="lang=='it'") Ingaggiami
+      span(data-ng-show="lang=='cat'") Contracta'm
+    p
+    p(data-ng-show="lang=='en'") I speak English, 
+      a(href="javascript:void(0)", data-ng-click="lang='fr'") French
+      span , 
+      a(href="javascript:void(0)", data-ng-click="lang='es'") Spanish
+      span, 
+      a(href="javascript:void(0)", data-ng-click="lang='it'") Italian
+      span  and 
+      a(href="javascript:void(0)", data-ng-click="lang='cat'") Catalan.
+    p(data-ng-show="lang=='fr'") Je parle 
+      a(href="javascript:void(0)", data-ng-click="lang='en'") anglais
+      span , français, 
+      a(href="javascript:void(0)", data-ng-click="lang='es'") espagnol
+      span, 
+      a(href="javascript:void(0)", data-ng-click="lang='it'") italien
+      span  et 
+      a(href="javascript:void(0)", data-ng-click="lang='cat'") catalan.
+    p(data-ng-show="lang=='es'") Hablo 
+      a(href="javascript:void(0)", data-ng-click="lang='en'") inglés
+      span , 
+      a(href="javascript:void(0)", data-ng-click="lang='fr'") francés
+      span , español, 
+      a(href="javascript:void(0)", data-ng-click="lang='it'") italiano
+      span  y 
+      a(href="javascript:void(0)", data-ng-click="lang='cat'") catalan.
+    p(data-ng-show="lang=='it'") Parlo 
+      a(href="javascript:void(0)", data-ng-click="lang='en'") inglese
+      span , 
+      a(href="javascript:void(0)", data-ng-click="lang='fr'") francese
+      span , 
+      a(href="javascript:void(0)", data-ng-click="lang='es'") spagnolo
+      span, italiano e 
+      a(href="javascript:void(0)", data-ng-click="lang='cat'") catalano.
+    p(data-ng-show="lang=='cat'") Parlo 
+      a(href="javascript:void(0)", data-ng-click="lang='en'") anglès
+      span , 
+      a(href="javascript:void(0)", data-ng-click="lang='fr'") francès
+      span , 
+      a(href="javascript:void(0)", data-ng-click="lang='es'") espanyol
+      span, 
+      a(href="javascript:void(0)", data-ng-click="lang='it'") italià
+      span  i català.
+
+  form.form-horizontal
+    div.control-group
+      label.control-label(for="") Your name
+      div.controls
+        input(type="text", placeholder="Your name")
+    div.control-group
+      label.control-label(for="") Your email
+      div.controls
+        input(type="email", placeholder="Your email")
+    div.control-group
+      label.control-label(for="") Your message
+      div.controls
+        textarea(placeholder="Your message")
+    div.control-group
+      div.controls
+        input.btn(type="submit", value="Send")

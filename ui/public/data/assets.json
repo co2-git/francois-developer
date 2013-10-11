@@ -1,8 +1,106 @@
 {
   "nodejs": {
-    "experience": "1+"
+    "experience": 2,
+    "category": "Scripting language"
   },
   "angular": {
-    "experience": "1+"
+    "experience": 1,
+    "category": "HTML5 framework"
+  },
+  "angular-ui": {
+    "experience": 1,
+    "category": "HTML5 framework"
+  },
+  "mongodb": {
+    "experience": 1,
+    "category": "Database"
+  },
+  "express": {
+    "experience": 2,
+    "category": "Web framework"
+  },
+  "jade": {
+    "experience": 2,
+    "category": "Template engine"
+  },
+  "bower": {
+    "experience": 1,
+    "category": "Module manager"
+  },
+  "requirejs": {
+    "experience": 2,
+    "category": "Module manager"
+  },
+  "bootstrap": {
+    "experience": 2,
+    "category": "HTML5 framework"
+  },
+  "jquery": {
+    "experience": 5,
+    "category": "Javascript library"
+  },
+  "html5": {
+    "experience": 4,
+    "category": "Template engine"
+  },
+  "html4": {
+    "experience": 15,
+    "category": "Template engine"
+  },
+  "javascript": {
+    "experience": 12,
+    "category": "Scripting language"
+  },
+  "css": {
+    "experience": 12,
+    "category": "Template engine"
+  },
+  "php": {
+    "experience": 10,
+    "category": "Scripting language"
+  },
+  "mysql": {
+    "experience": 10,
+    "category": "Database"
+  },
+  "css3": {
+    "experience": 5,
+    "category": "Template engine"
+  },
+  "sublime text editor": {
+    "experience": 2,
+    "category": "Code editor"
+  },
+  "rackspace cloud": {
+    "experience": 1,
+    "category": "Server admin"
+  },
+  "bash": {
+    "experience": 3,
+    "category": "Scripting language"
+  },
+  "github": {
+    "experience": 2,
+    "category": "Source control"
+  },
+  "bitbucket": {
+    "experience": 1,
+    "category": "Source control"
+  },
+  "git": {
+    "experience": 4,
+    "category": "Source control"
+  },
+  "jira": {
+    "experience": 1,
+    "category": "Project Management"
+  },
+  "jira agile": {
+    "experience": 1,
+    "category": "Project Management"
+  },
+  "eventsjs": {
+    "experience": 1,
+    "category": "Observer framework"
   }
 }

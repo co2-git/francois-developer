@@ -17,6 +17,7 @@ app.use(express.cookieParser());
 app.use(express.session({secret: '1234567890QWERTY', store: new express.session.MemoryStore()}));
 
 app.use(app.router);
+app.use(express.csrf());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only

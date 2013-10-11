@@ -1,0 +1,18 @@
+section.tab-pane#home.active
+    header.hero-unit
+        h1 
+            a(href="/#/assets") Assets
+            span  / 
+            span(data-ng-bind="asset.name")
+        p
+        p(data-ng-bind="asset.category")
+
+    h2 Years of experience with {{asset.name}}
+
+    p(data-ng-bind="asset.experience")
+
+    h2 Projects where I have used {{asset.name}}
+
+    ul
+        li(data-ng-repeat="project in asset.projects | orderBy:identity")
+            a(href="/#/projects/{{project}}", data-ng-bind="project")

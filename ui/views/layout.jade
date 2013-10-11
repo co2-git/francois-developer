@@ -1,15 +1,16 @@
 !!! 5
-meta(   charset='utf-8')
-title(  data-ng-bind='"francois-dev | " + $stateParams.hop') Datahop
-meta(   name='viewport', 
-        content='width=device-width, initial-scale=1.0')
-link(   rel='stylesheet', 
-        href='/bower_components/bootstrap/docs/assets/css/bootstrap.css')
-link(   rel='stylesheet', 
-        href='/bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css')
-link(   rel='stylesheet', 
-        href='/css/main.css')
-section.navbar.container.navbar-inverse
+meta(charset='utf-8')
+
+title(data-ng-bind='"~/francois/developer/" + $stateParams.hop') Datahop
+
+meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+link(rel='stylesheet', href='/bower_components/bootstrap/docs/assets/css/bootstrap.css')
+link(rel='stylesheet', href='/bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css')
+link(rel='stylesheet', href='/css/main.css')
+
+// Navigation bar
+section.navbar.navbar-inverse.container
   div.navbar-inner
     div.container
       a.btn.btn-navbar( data-toggle='collapse', 
@@ -17,29 +18,30 @@ section.navbar.container.navbar-inverse
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.brand(href='/') /francois/developer/
+      a.brand(href='/') ~/francois/developer/
+      // Navigation menu
       div.nav-collapse
         ul.nav
-          li
+          li(data-ng-class="{ active: $state.includes('assets') }")
             a(href='/#/assets') assets
           li.divider-vertical
-          li
-            a(href='#') projects
-          li.divider-vertical
-          li
-            a(href='#') feed
+          li(data-ng-class="{ active: $state.includes('projects') }")
+            a(href='/#/projects') projects
           li.divider-vertical
         ul.nav.pull-right
           li
-            button.btn.btn-info(href='#') hire me!
+            button.btn.btn-info(data-ng-click="goTo('hire-me')") hire me!
+
+// Main content
 section.container
-  // Navigation tabs
   section.tab-content
     section.tab-pane#home.active
       div(  data-ui-view='page', 
             data-ng-animate='{enter:"fade-enter"}')
         div.progress.progress-striped.active
           div.bar(style='width:40%')
+
+// footer
 footer.container
   hr
   p.muted version 0.0.0 | build 2 | built with
@@ -51,6 +53,7 @@ footer.container
     a(href='#') angular
     a(href='#') bootstrap
 
+// Bootstrap error modal
 section.modal.hide.fade#modal-error
   div.modal-header
     button.close(  type='button', data-dismiss='modal', aria-hidden='true') &times;
@@ -59,4 +62,11 @@ section.modal.hide.fade#modal-error
     p An error occured!
   div.modal-footer
     a.btn(href='#',  data-dismiss='modal') Close
+
+// Le Javascript
 script(data-main='/app/boot', src='/bower_components/requirejs/require.js')
+
+//
+  pre
+      | $state = {{$state.current.name}}
+      | $stateParams = {{$stateParams}}
