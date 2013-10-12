@@ -4,6 +4,10 @@ var express = require('express'),
   path = require('path'),
   packagejson = require('../package.json');
 
+console.log(app.get('env'));
+
+return;
+
 // all environments
 app.set('port', + process.env.PORT || 3100);
 app.set('views', __dirname + '/views');

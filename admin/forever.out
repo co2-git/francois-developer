@@ -227,3 +227,26 @@ Express server listening on port 3100
 [90mGET /bower_components/jquery/jquery.min.map [32m200 [90m3ms - 123.62kb[0m
 [90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [32m200 [90m3ms - 37.91kb[0m
 [90mGET /partials/home [32m200 [90m30ms - 542b[0m
+Express server listening on port 3100
+[90mGET / [36m304 [90m384ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m8ms[0m
+[90mGET /css/main.css [36m304 [90m6ms[0m
+[90mGET /bower_components/requirejs/require.js [36m304 [90m6ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m6ms[0m
+[90mGET /app/boot.js [36m304 [90m1ms[0m
+[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m3ms[0m
+[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /partials/home [32m200 [90m26ms - 542b[0m
+[90mGET /bower_components/bootstrap/docs/assets/img/glyphicons-halflings.png [36m304 [90m2ms[0m
+[90mGET /bower_components/jquery/jquery.min.map [32m200 [90m6ms - 123.62kb[0m
+Express server listening on port 3100
+development
+Express server listening on port 3100

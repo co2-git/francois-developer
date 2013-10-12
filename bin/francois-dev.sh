@@ -5,6 +5,7 @@ node_bin=~/.nvm/$node_version/bin/node;
 forever="$node_bin $my_path/node_modules/forever/bin/forever";
 bower="$node_bin $my_path/node_modules/bower/bin/bower";
 script="$my_path/ui/app.js";
+env='development';
 
 case "$1" in
   (install)
@@ -30,6 +31,7 @@ case "$1" in
     touch $my_path/admin/forever.out;
     touch $my_path/admin/forever.err;
     touch $my_path/admin/forever.pid;
+    export NODE_ENV="$env";
     $forever \
         --append \
         -l $my_path/admin/forever.log \
