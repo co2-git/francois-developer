@@ -18,7 +18,9 @@ section.navbar.navbar-inverse.container
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.brand(href='/') ~francois/{{$state.current.name}}
+      a.brand(href='/')
+        span /francois/ 
+        span(data-ng-bind='$state.current.name')
       // Navigation menu
       div.nav-collapse
         ul.nav

@@ -1,70 +1,229 @@
 Express server listening on port 3100
-[90mGET / [32m200 [90m308ms - 2.6kb[0m
-[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m14ms[0m
-[90mGET /bower_components/requirejs/require.js [36m304 [90m9ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m9ms[0m
-[90mGET /css/main.css [36m304 [90m11ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/img/glyphicons-halflings.png [32m200 [90m5ms - 12.5kb[0m
-[90mGET /app/boot.js [36m304 [90m1ms[0m
-[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m4ms[0m
-[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /partials/home [32m200 [90m25ms - 525b[0m
-[90mGET / [36m304 [90m50ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m3ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m2ms[0m
-[90mGET /css/main.css [36m304 [90m1ms[0m
-[90mGET /bower_components/requirejs/require.js [36m304 [90m1ms[0m
-[90mGET /app/boot.js [36m304 [90m2ms[0m
-[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /partials/home [32m200 [90m25ms - 525b[0m
-[90mGET / [36m304 [90m52ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m2ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m1ms[0m
-[90mGET /css/main.css [36m304 [90m0ms[0m
-[90mGET /bower_components/requirejs/require.js [36m304 [90m1ms[0m
-[90mGET /app/boot.js [36m304 [90m1ms[0m
-[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m0ms[0m
-[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /partials/home [32m200 [90m15ms - 525b[0m
-[90mGET / [36m304 [90m32ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m1ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m1ms[0m
-[90mGET /css/main.css [36m304 [90m1ms[0m
-[90mGET /bower_components/requirejs/require.js [36m304 [90m1ms[0m
-[90mGET /app/boot.js [36m304 [90m0ms[0m
-[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m2ms[0m
-[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m0ms[0m
-[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m4ms[0m
-[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m1ms[0m
-[90mGET /partials/home [32m200 [90m18ms - 525b[0m
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+[90mGET / [32m200 [90m272ms - 2.67kb[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [32m200 [90m10ms - 21.59kb[0m
+[90mGET /css/main.css [32m200 [90m10ms - 108b[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [32m200 [90m13ms - 124.37kb[0m
+[90mGET /bower_components/requirejs/require.js [32m200 [90m9ms - 80.69kb[0m
+[90mGET /bower_components/bootstrap/docs/assets/img/glyphicons-halflings.png [32m200 [90m1ms - 12.5kb[0m
+[90mGET /app/boot.js [32m200 [90m1ms - 859b[0m
+[90mGET /app/app.js?v=1.1 [32m200 [90m1ms - 2.47kb[0m
+[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [32m200 [90m4ms - 81.65kb[0m
+[90mGET /bower_components/angular/angular.min.js?v=1.1 [32m200 [90m4ms - 79.54kb[0m
+[90mGET /app/controllers/assets.js?v=1.1 [32m200 [90m1ms - 628b[0m
+[90mGET /app/controllers/projects.js?v=1.1 [32m200 [90m6ms - 509b[0m
+[90mGET /app/controllers/project.js?v=1.1 [32m200 [90m4ms - 686b[0m
+[90mGET /app/controllers/asset.js?v=1.1 [32m200 [90m3ms - 1.01kb[0m
+[90mGET /app/controllers/hire-me.js?v=1.1 [32m200 [90m2ms - 147b[0m
+[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [32m200 [90m1ms - 60.47kb[0m
+[90mGET /bower_components/jquery/jquery.min.map [32m200 [90m3ms - 123.62kb[0m
+[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [32m200 [90m6ms - 37.91kb[0m
+[90mGET /partials/home [32m200 [90m20ms - 542b[0m
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+Express server listening on port 3100
+[90mGET / [32m200 [90m327ms - 2.67kb[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [32m200 [90m16ms - 21.59kb[0m
+[90mGET /css/main.css [32m200 [90m16ms - 108b[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [32m200 [90m20ms - 124.37kb[0m
+[90mGET /bower_components/requirejs/require.js [32m200 [90m17ms - 80.69kb[0m
+[90mGET /bower_components/bootstrap/docs/assets/img/glyphicons-halflings.png [32m200 [90m1ms - 12.5kb[0m
+[90mGET /app/boot.js [32m200 [90m1ms - 859b[0m
+[90mGET /app/app.js?v=1.1 [32m200 [90m2ms - 2.47kb[0m
+[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [32m200 [90m3ms - 81.65kb[0m
+[90mGET /bower_components/angular/angular.min.js?v=1.1 [32m200 [90m2ms - 79.54kb[0m
+[90mGET /app/controllers/assets.js?v=1.1 [32m200 [90m6ms - 628b[0m
+[90mGET /app/controllers/projects.js?v=1.1 [32m200 [90m5ms - 509b[0m
+[90mGET /app/controllers/project.js?v=1.1 [32m200 [90m4ms - 686b[0m
+[90mGET /app/controllers/asset.js?v=1.1 [32m200 [90m3ms - 1.01kb[0m
+[90mGET /app/controllers/hire-me.js?v=1.1 [32m200 [90m3ms - 147b[0m
+[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [32m200 [90m1ms - 60.47kb[0m
+[90mGET /bower_components/jquery/jquery.min.map [32m200 [90m3ms - 123.62kb[0m
+[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [32m200 [90m2ms - 37.91kb[0m
+[90mGET /partials/home [32m200 [90m32ms - 542b[0m
+Express server listening on port 3100
+[90mGET / [32m200 [90m338ms - 2.67kb[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [32m200 [90m12ms - 21.59kb[0m
+[90mGET /css/main.css [32m200 [90m11ms - 108b[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [32m200 [90m15ms - 124.37kb[0m
+[90mGET /bower_components/requirejs/require.js [32m200 [90m7ms - 80.69kb[0m
+[90mGET /bower_components/bootstrap/docs/assets/img/glyphicons-halflings.png [32m200 [90m1ms - 12.5kb[0m
+[90mGET /app/boot.js [32m200 [90m1ms - 859b[0m
+[90mGET /app/app.js?v=1.1 [32m200 [90m2ms - 2.47kb[0m
+[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [32m200 [90m3ms - 81.65kb[0m
+[90mGET /bower_components/angular/angular.min.js?v=1.1 [32m200 [90m2ms - 79.54kb[0m
+[90mGET /app/controllers/assets.js?v=1.1 [32m200 [90m6ms - 628b[0m
+[90mGET /app/controllers/projects.js?v=1.1 [32m200 [90m6ms - 509b[0m
+[90mGET /app/controllers/project.js?v=1.1 [32m200 [90m4ms - 686b[0m
+[90mGET /app/controllers/asset.js?v=1.1 [32m200 [90m4ms - 1.01kb[0m
+[90mGET /app/controllers/hire-me.js?v=1.1 [32m200 [90m2ms - 147b[0m
+[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [32m200 [90m4ms - 60.47kb[0m
+[90mGET /bower_components/jquery/jquery.min.map [32m200 [90m3ms - 123.62kb[0m
+[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [32m200 [90m3ms - 37.91kb[0m
+[90mGET /partials/home [32m200 [90m30ms - 542b[0m

@@ -1,13 +1,13 @@
 {
   "name": "francois-dev",
-  "version": "0.0.5",
-  "author": "francois@co2.com",
+  "version": "0.0.6",
+  "author": "francoisrvespa@gmail.com",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/co2-git/datahop"
   },
-  "bin": "./bin/francois-dev.js",
+  "bin": "./bin/francois-dev.sh",
   "main": "main",
   "dependencies": {
     "express": "3.3.*",
