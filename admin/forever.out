@@ -1,0 +1,70 @@
+Express server listening on port 3100
+[90mGET / [32m200 [90m308ms - 2.6kb[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m14ms[0m
+[90mGET /bower_components/requirejs/require.js [36m304 [90m9ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m9ms[0m
+[90mGET /css/main.css [36m304 [90m11ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/img/glyphicons-halflings.png [32m200 [90m5ms - 12.5kb[0m
+[90mGET /app/boot.js [36m304 [90m1ms[0m
+[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m4ms[0m
+[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /partials/home [32m200 [90m25ms - 525b[0m
+[90mGET / [36m304 [90m50ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m3ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m2ms[0m
+[90mGET /css/main.css [36m304 [90m1ms[0m
+[90mGET /bower_components/requirejs/require.js [36m304 [90m1ms[0m
+[90mGET /app/boot.js [36m304 [90m2ms[0m
+[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /partials/home [32m200 [90m25ms - 525b[0m
+[90mGET / [36m304 [90m52ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m2ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m1ms[0m
+[90mGET /css/main.css [36m304 [90m0ms[0m
+[90mGET /bower_components/requirejs/require.js [36m304 [90m1ms[0m
+[90mGET /app/boot.js [36m304 [90m1ms[0m
+[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m0ms[0m
+[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /partials/home [32m200 [90m15ms - 525b[0m
+[90mGET / [36m304 [90m32ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap.css [36m304 [90m1ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css [36m304 [90m1ms[0m
+[90mGET /css/main.css [36m304 [90m1ms[0m
+[90mGET /bower_components/requirejs/require.js [36m304 [90m1ms[0m
+[90mGET /app/boot.js [36m304 [90m0ms[0m
+[90mGET /app/app.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/jquery/jquery.min.js?v=1.1 [36m304 [90m2ms[0m
+[90mGET /bower_components/angular/angular.min.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/assets.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/projects.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/project.js?v=1.1 [36m304 [90m0ms[0m
+[90mGET /app/controllers/asset.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /app/controllers/hire-me.js?v=1.1 [36m304 [90m4ms[0m
+[90mGET /bower_components/bootstrap/docs/assets/js/bootstrap.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /bower_components/angular-ui-router/release/angular-ui-router.js?v=1.1 [36m304 [90m1ms[0m
+[90mGET /partials/home [32m200 [90m18ms - 525b[0m

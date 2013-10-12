@@ -1,18 +1,20 @@
 {
   "name": "francois-dev",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "francois@co2.com",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/co2-git/datahop"
   },
+  "bin": "./bin/francois-dev.js",
   "main": "main",
   "dependencies": {
     "express": "3.3.*",
     "jade": "*",
     "bower": "1.1.2",
     "validator": "0.4.11",
-    "sendgrid": "latest"
+    "sendgrid": "latest",
+    "forever": "0.10.8"
   }
 }
