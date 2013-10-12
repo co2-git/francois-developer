@@ -1,7 +1,7 @@
 !!! 5
 meta(charset='utf-8')
 
-title(data-ng-bind='"~/francois/developer/" + $stateParams.hop') Datahop
+title(data-ng-bind='"/francois/ " + $state.current.name') /francois/
 
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
@@ -18,7 +18,7 @@ section.navbar.navbar-inverse.container
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.brand(href='/') ~/francois/developer/
+      a.brand(href='/') ~francois/{{$state.current.name}}
       // Navigation menu
       div.nav-collapse
         ul.nav

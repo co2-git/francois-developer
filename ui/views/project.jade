@@ -1,18 +1,25 @@
 section.tab-pane#home.active
-    header.hero-unit
-        h1 
-            a(href="/#/projects") Projects
-            span  / 
-            span(data-ng-bind="project.name")
-        p
-        p(data-ng-bind="project.about")
+  header.hero-unit
+    h1 
+      a(href="/#/projects") Projects
+      span  / 
+      span(data-ng-bind="project.name")
+    p
+    p(data-ng-bind="project.about")
+    img(src="/img/{{project.name}}-screenshot.png")
 
-    h2 Role
+  h2 Role
 
-    p(data-ng-bind="project.role")
+  p(data-ng-bind="project.role")
 
-    h2 Assets used
+  h2 Source
 
-    ul
-        li(data-ng-repeat="asset in project.assets | orderBy:identity")
-            a(href="/#/assets/{{asset}}", data-ng-bind="asset")
+  div
+    a(href="{{project.source}}", data-ng-bind="project.source", target="_blank")
+
+
+  h2 Assets used
+
+  ul
+    li(data-ng-repeat="asset in project.assets | orderBy:identity")
+      a(href="/#/assets/{{asset}}", data-ng-bind="asset")

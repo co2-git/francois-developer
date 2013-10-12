@@ -3,6 +3,7 @@
 		"about": "A small HTML5 web app to showcase my skills to recruiters",
 		"role": ["CTO", "Project Manager", "Developer", "Designer"],
 		"type": "personal",
+		"source": "https://github.com/co2-git/francois-developer",
 		"assets": ["nodejs",
 			"express",
 			"jade",
@@ -32,11 +33,13 @@
 	"apt": {
 		"about": "Dependency manager",
 		"role": ["CTO", "Project Manager", "Developer", "Designer"],
-		"assets": ["nodejs", "git", "github", "eventsjs"]
+		"assets": ["nodejs", "git", "github", "eventsjs"],
+		"source": "https://github.com/co2-git/apt"
 	},
 	"datahop": {
 		"about": "Database-agnostic Web GUI",
 		"role": ["CTO", "Project Manager", "Developer", "Designer"],
+		"source": "https://github.com/co2-git/datahop",
 		"assets": ["nodejs", "express", "jade", "html5", "javascript", "requirejs",
 			"bower", "css3", "mongodb", "mysql", "sqlite", "angular", "jquery",
 			"git", "github", "events", "bootstrap"]
