@@ -55,7 +55,7 @@ case "$1" in
         --pidFile $my_path/admin/forever.pid \
         --debug \
         --watch \
-        --watchDirectory $my_path/ui \
+        --watchDirectory $my_path \
       start $script;
     ;;
 
@@ -68,7 +68,10 @@ case "$1" in
     [ -d .git ] || {
       echo "git not found";
       git init;
+      cp .npmignore .gitignore;
+      git add -A;
       git remote add origin https://github.com/co2-git/francois-developer.git;
+      git pull -f origin master;
     }
     branch="$(git branch | grep \* | sed 's/* //')";
     [ "$branch" = master ] || {
