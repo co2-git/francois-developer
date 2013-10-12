@@ -4,10 +4,6 @@ var express = require('express'),
   path = require('path'),
   packagejson = require('../package.json');
 
-console.log(app.get('env'));
-
-return;
-
 // all environments
 app.set('port', + process.env.PORT || 3100);
 app.set('views', __dirname + '/views');
@@ -42,7 +38,7 @@ app.use(function(err, req, res, next) {
 
 // Routes: INDEX
 app.get('/', function getIndex (req, res) {
-  res.render('layout', { about: packagejson });
+  res.render('layout', { about: packagejson, env: app.get('env') });
 });
 
 // Routes: PARTIALS

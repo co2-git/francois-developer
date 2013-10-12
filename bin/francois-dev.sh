@@ -4,10 +4,25 @@ node_version="v0.10.15";
 node_bin=~/.nvm/$node_version/bin/node;
 forever="$node_bin $my_path/node_modules/forever/bin/forever";
 bower="$node_bin $my_path/node_modules/bower/bin/bower";
+less="$node_bin $my_path/node_modules/less/bin/lessc";
 script="$my_path/ui/app.js";
 env='development';
 
+for arg; do
+  [[ "$arg" == env=* ]] && {
+    env="$(echo "$arg" | cut -d= -f2)";
+  }
+done
+
 case "$1" in
+  (build)
+    $less --yui-compress $my_path/ui/public/bower_components/bootstrap/less/bootstrap.less \
+      > $my_path/ui/public/css/bootstrap.min.css;
+    $less --yui-compress $my_path/ui/public/bower_components/bootstrap/less/responsive.less \
+      > $my_path/ui/public/css/bootstrap-responsive.min.css;
+    cp $my_path/ui/public/bower_components/bootstrap/img/* $my_path/ui/public/img;
+    ;;
+
   (install)
     cd $my_path;
     cd ui/public;
@@ -26,7 +41,7 @@ case "$1" in
     ;;
 
   (start)
-    mkdir $my_path/admin;
+    [ ! -d $my_path/admin ] && mkdir $my_path/admin;
     touch $my_path/admin/forever.log;
     touch $my_path/admin/forever.out;
     touch $my_path/admin/forever.err;
@@ -66,6 +81,6 @@ case "$1" in
     ;;
 
   (help|*)
-    echo francois-dev \{ install \| start \| status \| stop \| update \}
+    echo francois-dev \{ install \| build \| start \| status \| stop \| update \}
     ;;
 esac
