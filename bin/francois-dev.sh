@@ -1,7 +1,9 @@
 #!/bin/bash
 my_path="$(dirname $(cd >/dev/null $(dirname ${BASH_SOURCE[0]:-$0}) && pwd))";
-node_bin=~/.nvm/v0.10.15/bin/node;
+node_version="v0.10.15";
+node_bin=~/.nvm/$node_version/bin/node;
 forever="$node_bin $my_path/node_modules/forever/bin/forever";
+bower="$node_bin $my_path/node_modules/bower/bin/bower";
 script="$my_path/ui/app.js";
 
 case "$1" in
@@ -17,6 +19,11 @@ case "$1" in
     ;;
 
   (start)
+    mkdir $my_path/admin;
+    touch $my_path/admin/forever.log;
+    touch $my_path/admin/forever.out;
+    touch $my_path/admin/forever.err;
+    touch $my_path/admin/forever.pid;
     $forever \
         --append \
         -l $my_path/admin/forever.log \
@@ -46,6 +53,8 @@ case "$1" in
       exit 1;
     }
     git pull origin master;
+    cd ui/public;
+    $bower install;
     ;;
 
   (help|*)
