@@ -7,6 +7,12 @@ bower="$node_bin $my_path/node_modules/bower/bin/bower";
 script="$my_path/ui/app.js";
 
 case "$1" in
+  (install)
+    cd $my_path;
+    cd ui/public;
+    $bower install;
+    ;;
+
   (status)
     list="$($forever list)";
     echo "$list" | grep 1>&2 $script && {
@@ -58,6 +64,6 @@ case "$1" in
     ;;
 
   (help|*)
-    echo francois-dev \{ start \| status \| stop \| update \}
+    echo francois-dev \{ install \| start \| status \| stop \| update \}
     ;;
 esac
