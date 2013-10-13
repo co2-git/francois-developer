@@ -102,5 +102,17 @@
   "eventsjs": {
     "experience": 1,
     "category": "Observer framework"
+  },
+  "less": {
+    "experience": 2,
+    "category": "CSS framework"
+  },
+  "lessc": {
+    "experience": 1,
+    "category": "Minifier"
+  },
+  "forever": {
+    "experience": 1,
+    "category": "Project deployment"
   }
 }

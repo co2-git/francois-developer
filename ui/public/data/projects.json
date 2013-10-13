@@ -18,7 +18,10 @@
 			"sublime text editor",
 			"github",
 			"git",
-			"bootstrap"]
+			"bootstrap",
+			"bash",
+			"less",
+			"forever"]
 	},
 	"immobileaks": {
 		"about": "immobileaks is a french start-up specialized in geo-mapping traditional postal addresses",
