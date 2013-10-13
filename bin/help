@@ -1,3 +1,0 @@
-#!/bin/bash
-my_path="$(dirname $(cd >/dev/null $(dirname ${BASH_SOURCE[0]:-$0}) && pwd))";
-$my_path/bin/francois-dev.sh 2>/dev/null;

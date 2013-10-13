@@ -1,11 +1,28 @@
 #!/bin/bash
-my_path="$(dirname $(cd >/dev/null $(dirname ${BASH_SOURCE[0]:-$0}) && pwd))";
-node_version="v0.10.15";
-node_bin=~/.nvm/$node_version/bin/node;
-forever="$node_bin $my_path/node_modules/forever/bin/forever";
-bower="$node_bin $my_path/node_modules/bower/bin/bower";
-less="$node_bin $my_path/node_modules/less/bin/lessc";
-script="$my_path/ui/app.js";
+
+npmls="$(npm ls -g | grep francois-dev)";
+npmg=y;
+
+[ -z "$npmls" ] && {
+  npmg=n;
+  npmls="$(npm ls | grep francois-dev)";
+}
+
+[ -z "$npmls" ] && {
+  echo 'Error: francois-dev not found in npm list (global AND local)';
+  exit;
+}
+
+path="$(echo "$npmls" | cut -d' ' -f2)";
+
+cd $path;
+
+node_version='v0.10.15';
+
+script="ui/app.js";
+
+bin=node_modules/.bin;
+
 env='development';
 
 for arg; do
@@ -14,53 +31,94 @@ for arg; do
   }
 done
 
+function fdev.version() {
+  cd $path;
+  cat package.json | grep '"version":' | sed 's/\s\+"version": "\(.\+\)",/\1/';
+}
+
+function fdev.build() {
+  cd $path;
+  echo 1>&2 'Compiling less...';
+  node $bin/lessc --yui-compress \
+    ui/public/bower_components/bootstrap/less/bootstrap.less \
+    > ui/public/css/bootstrap.min.css;
+  node $bin/lessc --yui-compress \
+    ui/public/bower_components/bootstrap/less/responsive.less \
+    > ui/public/css/bootstrap-responsive.min.css;
+  
+  echo 1>&2 'Copying images...';
+  cp ui/public/bower_components/bootstrap/img/* ui/public/img;
+  
+  echo 1>&2 'Bower install...';
+  cd ui/public;
+  node ../../$bin/bower install;
+  cd $path;
+
+  echo Built :\);
+}
+
+function fdev.status() {
+  cd $path;
+  list="$(node $bin/forever list)";
+  echo "$list" | grep 1>&2 $script && {
+    echo Running;
+    return 0;
+  } || {
+    echo Stopped;
+    return 1
+  }
+}
+
+function fdev.stop() {
+  cd $path;
+  node $bin/forever stop $path/$script;
+}
+
+function fdev.start() {
+  cd $path;
+  if fdev.status 1>/dev/null 2>/dev/null; then
+    echo 'Already running';
+    return;
+  fi
+  [ ! -d admin ] && mkdir admin;
+  touch admin/forever.log;
+  touch admin/forever.out;
+  touch admin/forever.err;
+  touch admin/forever.pid;
+  echo 1>&2 Environment: $env;
+  echo 1>&2 Starting foreverjs;
+  export NODE_ENV="$env";
+  node $bin/forever \
+      --append \
+      -l $path/admin/forever.log \
+      -o $path/admin/forever.out \
+      -e $path/admin/forever.err \
+      --pidFile $path/admin/forever.pid \
+      --debug \
+      --watch \
+      --watchDirectory $path \
+    start $path/$script;
+}
+
 case "$1" in
-  (build)
-    $less --yui-compress $my_path/ui/public/bower_components/bootstrap/less/bootstrap.less \
-      > $my_path/ui/public/css/bootstrap.min.css;
-    $less --yui-compress $my_path/ui/public/bower_components/bootstrap/less/responsive.less \
-      > $my_path/ui/public/css/bootstrap-responsive.min.css;
-    cp $my_path/ui/public/bower_components/bootstrap/img/* $my_path/ui/public/img;
+  (version)
+    fdev.version;
     ;;
 
-  (install)
-    cd $my_path;
-    cd ui/public;
-    $bower install;
+  (build)
+    fdev.build;
     ;;
 
   (status)
-    list="$($forever list)";
-    echo "$list" | grep 1>&2 $script && {
-      echo Running;
-      exit 0;
-    } || {
-      echo Stopped;
-      exit 1;
-    }
+    fdev.status 2>/dev/null;
     ;;
 
   (start)
-    [ ! -d $my_path/admin ] && mkdir $my_path/admin;
-    touch $my_path/admin/forever.log;
-    touch $my_path/admin/forever.out;
-    touch $my_path/admin/forever.err;
-    touch $my_path/admin/forever.pid;
-    export NODE_ENV="$env";
-    $forever \
-        --append \
-        -l $my_path/admin/forever.log \
-        -o $my_path/admin/forever.out \
-        -e $my_path/admin/forever.err \
-        --pidFile $my_path/admin/forever.pid \
-        --debug \
-        --watch \
-        --watchDirectory $my_path \
-      start $script;
+    fdev.start;
     ;;
 
   (stop)
-    $forever stop $script;
+    fdev.stop;
     ;;
 
   (update)
@@ -70,6 +128,7 @@ case "$1" in
       git init;
       cp .npmignore .gitignore;
       git add -A;
+      git commit -a -m 'Installing update by git';
       git remote add origin https://github.com/co2-git/francois-developer.git;
       git pull -f origin master;
     }
@@ -79,11 +138,10 @@ case "$1" in
       exit 1;
     }
     git pull origin master;
-    cd ui/public;
-    $bower install;
+    $0 build;
     ;;
 
   (help|*)
-    echo francois-dev \{ install \| build \| start \| status \| stop \| update \}
+    echo francois-dev \{ help \| version \| build \| start \| status \| stop \| update \}
     ;;
 esac
