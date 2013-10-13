@@ -1,7 +1,7 @@
 #!/bin/bash
 
 [ -L $0 ] && {
-  path="$(dirname $0)/$(readlink $0)";
+  path="$(dirname $(dirname $(dirname $0)/$(readlink $0)))";
 } || {
   path="."
 }
