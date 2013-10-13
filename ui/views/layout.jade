@@ -5,6 +5,8 @@ title(data-ng-bind='"/francois/ " + $state.current.name') /francois/
 
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
+link(rel='env', content='' + about.env)
+
 if about.env === 'development'
   link(rel='stylesheet', href='/bower_components/bootstrap/docs/assets/css/bootstrap.css')
   link(rel='stylesheet', href='/bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css')

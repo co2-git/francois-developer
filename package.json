@@ -1,6 +1,6 @@
 {
   "name": "francois-dev",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "francoisrvespa@gmail.com",
   "private": true,
   "repository": {
@@ -17,5 +17,8 @@
     "sendgrid": "latest",
     "forever": "0.10.8",
     "less": "1.4.2"
+  },
+  "scripts": {
+    "start": "./bin/status"
   }
 }
