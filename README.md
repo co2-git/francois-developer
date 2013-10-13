@@ -42,3 +42,7 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
 # Help
 
     francois-dev help
+
+# Notes
+
+If you don't want to install it globally, remove the `-g` from the `npm` commands and replace `francois-dev` in the other commands by `/path/bin/francois-dev` where `path` is the directory where you installed it locally.
