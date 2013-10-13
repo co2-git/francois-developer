@@ -1,19 +1,12 @@
 #!/bin/bash
 
-npmls="$(npm ls -g | grep francois-dev)";
-npmg=y;
-
-[ -z "$npmls" ] && {
-  npmg=n;
-  npmls="$(npm ls | grep francois-dev)";
+[ -L $0 ] && {
+  path="$(dirname $0)/$(readlink $0)";
+} || {
+  path="."
 }
 
-[ -z "$npmls" ] && {
-  echo 'Error: francois-dev not found in npm list (global AND local)';
-  exit;
-}
-
-path="$(echo "$npmls" | cut -d' ' -f2)";
+echo Path: $path;
 
 cd $path;
 
