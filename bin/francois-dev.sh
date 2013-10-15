@@ -3,10 +3,8 @@
 [ -L $0 ] && {
   path="$(dirname $(dirname $(dirname $0)/$(readlink $0)))";
 } || {
-  path="."
+  path="$(npm ls francois-dev | grep francois-dev | cut -d' ' -f2)";
 }
-
-echo Path: $path;
 
 cd $path;
 
@@ -94,6 +92,10 @@ function fdev.start() {
 }
 
 case "$1" in
+  (path)
+    echo $path;
+    ;;
+
   (version)
     fdev.version;
     ;;
@@ -135,6 +137,6 @@ case "$1" in
     ;;
 
   (help|*)
-    echo francois-dev \{ help \| version \| build \| start \| status \| stop \| update \}
+    echo francois-dev \{ help \| version \| path \| build \| start \| status \| stop \| update \}
     ;;
 esac

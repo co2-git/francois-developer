@@ -1,6 +1,6 @@
 {
   "name": "francois-dev",
-  "version": "0.0.12",
+  "version": "0.0.13-alpha",
   "author": "francoisrvespa@gmail.com",
   "private": true,
   "repository": {
@@ -16,6 +16,17 @@
     "validator": "0.4.11",
     "sendgrid": "latest",
     "forever": "0.10.8",
-    "less": "1.4.2"
+    "less": "1.4.2",
+    "colors": "0.6.2"
+  },
+  "config": {
+    "env": "development"
+  },
+  "scripts": {
+    "version": "./bin/francois-dev.js version",
+    "help": "./bin/francois-dev.js help",
+    "path": "./bin/francois-dev.js path",
+    "build": "./bin/francois-dev.js build",
+    "status": "./bin/francois-dev.js status"
   }
 }

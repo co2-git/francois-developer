@@ -5,44 +5,100 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
 
 # Install
 
+## Global
+
 	npm install git+https://github.com/co2-git/francois-developer.git -g
+
+## Local
+    npm install git+https://github.com/co2-git/francois-developer.git
+
 
 # Uninstall
 
+## Global
+
     npm uninstall francois-dev -g
+
+## Local
+
+    npm uninstall francois-dev
 
 # Build
 
+## Global
+
     francois-dev build
+
+## Local
+    
+    npm run-script build    
 
 # Start http-server
 
+## Global
+
     francois-dev start
+
+## Local
+
+    npm start
 
 # Start for production
 
-    francois-dev start env=production
+## Global
+
+    francois-dev start --env=production
+
+## Local
+
+    npm --env=production start
 
 # Stop http-server
 
+## Global
+
     francois-dev stop
+
+## Local
+
+    npm stop
 
 # Get http-server status
 
+## Global
+
     francois-dev status
+
+## Local
+
+    npm run-script status
 
 # Update
 
+## Global
+
     francois-dev update
+
+## Local
+
+    npm run-script update
 
 # Version
 
+## Global
+
     francois-dev version
+
+## Local
+
+    npm run-script version
 
 # Help
 
+## Global
+
     francois-dev help
 
-# Notes
+## Local
 
-If you don't want to install it globally, remove the `-g` from the `npm` commands and replace `francois-dev` in the other commands by `/path/bin/francois-dev` where `path` is the directory where you installed it locally.
+    npm run-script help
