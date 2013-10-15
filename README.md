@@ -75,6 +75,8 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
 
 # Update
 
+If you go through usual `npm update` to update and you have your server live, your server will go down during the update. If you want to update while keeping your live server up, do as below:
+
 ## Global
 
     francois-dev update
