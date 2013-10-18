@@ -1,6 +1,6 @@
 {
   "name": "francois-dev",
-  "version": "0.0.13-alpha",
+  "version": "0.0.13",
   "author": "francoisrvespa@gmail.com",
   "private": true,
   "repository": {
@@ -15,9 +15,11 @@
     "bower": "1.1.2",
     "validator": "0.4.11",
     "sendgrid": "latest",
-    "forever": "0.10.8",
     "less": "1.4.2",
-    "colors": "0.6.2"
+    "colors": "0.6.2",
+    "socket.io": "~0.9.16",
+    "uglifyjs": "~2.3.6",
+    "requirejs": "~2.1.9"
   },
   "config": {
     "env": "development"
@@ -27,6 +29,7 @@
     "help": "./bin/francois-dev.js help",
     "path": "./bin/francois-dev.js path",
     "build": "./bin/francois-dev.js build",
-    "status": "./bin/francois-dev.js status"
+    "status": "./bin/francois-dev.js status",
+    "stop": "./bin/francois-dev.js stop"
   }
 }

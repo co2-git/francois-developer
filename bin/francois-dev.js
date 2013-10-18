@@ -6,10 +6,24 @@ if ( ! action ) {
 	action = 'help';
 }
 
-var Action = require('./' + action);
+try {
+  var Action = require('../lib/' + action);
 
-Action(function (error, response) {
-	if ( error ) {
-		throw error;
-	}
-});
+  var Run = Action(
+    function onActionDone (error, response) {
+      if ( error ) {
+        throw error;
+      }
+    });
+
+  if ( Run && typeof Run === 'object' && typeof Run.onStdio === 'function' ) {
+    Run.stdio(function (message) {
+      console.log(message);
+    });
+  }
+}
+
+catch (e) {
+  require('colors');
+  console.log(('Error: action not found: ' + action).red);
+}

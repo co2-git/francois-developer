@@ -5,6 +5,8 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
 
 # Install
 
+This will also install bower dependencies.
+
 ## Global
 
 	npm install git+https://github.com/co2-git/francois-developer.git -g
@@ -25,13 +27,15 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
 
 # Build
 
+Builds the code for production (compiling LESS files). *Note*: this is done by default before starting the server for production.
+
 ## Global
 
     francois-dev build
 
 ## Local
     
-    npm run-script build    
+    npm run build    
 
 # Start http-server
 
@@ -71,21 +75,28 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
 
 ## Local
 
-    npm run-script status
+    npm run status
 
-# Update
+# Live update
 
-If you go through usual `npm update` to update and you have your server live, your server will go down during the update. If you want to update while keeping your live server up, do as below:
+If you go through usual `npm update` to update and you have your server live, your server will go down during the update. If you want to update while keeping your live server up, do as below (*Note:* this will use git).
+
+To update your `node` dependencies or your `bower` dependencies, do as usual:
+
+    npm update
+    bower update
 
 ## Global
 
-    francois-dev update
+    francois-dev live-update
 
 ## Local
 
-    npm run-script update
+    npm run live-update
 
 # Version
+
+Return current version.
 
 ## Global
 
@@ -93,7 +104,7 @@ If you go through usual `npm update` to update and you have your server live, yo
 
 ## Local
 
-    npm run-script version
+    npm run version
 
 # Help
 
@@ -103,4 +114,4 @@ If you go through usual `npm update` to update and you have your server live, yo
 
 ## Local
 
-    npm run-script help
+    npm run help

@@ -1,0 +1,15 @@
+.brand {
+	color: #fff !important;
+}
+footer a {
+	color: #666;
+	padding:4px;
+}
+form {
+	border: 1px dotted #ccc;
+	border-radius: 4px;
+	padding: 16px;
+}
+article {
+	/*border:1px solid red;*/
+}
