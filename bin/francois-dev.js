@@ -1,29 +1,25 @@
 #!/usr/bin/env node
 
+require('colors');
+
+var main = require('../main');
 var action = process.argv[2];
+var json = require('../package.json');
 
 if ( ! action ) {
 	action = 'help';
 }
 
-try {
-  var Action = require('../lib/' + action);
+main(action)
+  .on('message', function (message) {
+    console.log(message);
+  })
 
-  var Run = Action(
-    function onActionDone (error, response) {
-      if ( error ) {
-        throw error;
-      }
-    });
+  .on('error', function (error) {
+    throw error;
+  })
 
-  if ( Run && typeof Run === 'object' && typeof Run.onStdio === 'function' ) {
-    Run.stdio(function (message) {
-      console.log(message);
-    });
-  }
-}
-
-catch (e) {
-  require('colors');
-  console.log(('Error: action not found: ' + action).red);
-}
+  .on('done', function (done) {
+    console.log();
+    console.log(('francois-dev v' + json.version).grey);
+  });

@@ -1,4 +1,4 @@
+/build/
+/dev/bower_components/
 /node_modules/
-/public/bower_components/
-/server/*
-/public/app/*
+/server/

@@ -1,0 +1,56 @@
+{
+	"paths": {
+		"bower_components": "dev/bower_components",
+		"app": "build/app",
+		"ast": "build/ast",
+		"vendors": "vendor",
+		"devApp": "dev/app",
+		"devCSS": "dev/css"
+	},
+	"app": {
+		"uglify": {
+			"boot" : true
+		}
+	},
+	"vendors": {
+		"bootstrap": {
+			"less": {
+				"bootstrap": true
+			},
+			
+			"images": {
+				"glyphicons-halflings.png": true,
+				"glyphicons-halflings-white.png": true
+			},
+			
+			"copyminjs": {
+				"$path": "docs/assets/js",
+				"bootstrap": true
+			}
+		},
+		
+		"jquery": {
+			"copyminjs": true
+		},
+
+		"angular": {
+			"copyminjs": true
+		},
+
+		"angular-ui": {
+			"$path": "angular-ui-router",
+			"copyminjs": {
+				"$path": "release",
+				"angular-ui-router": true
+			}
+		},
+
+		"socket.io": {
+			"$path": "socket.io-client",
+			"copyminjs": {
+				"$path": "dist",
+				"socket.io": true
+			}
+		}
+	}
+}
