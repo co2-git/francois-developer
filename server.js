@@ -4,8 +4,10 @@ if ( ! env ) {
 	env = require('./package.json').config.env;
 }
 
-require('./lib/start')({ env: env }, function (error, status) {
-  if ( error ) {
-    return console.error(error);
-  }
-});
+require('./main')('start', { env: env })
+  .on('message', function (message) {
+    console.log(message);
+  })
+  .on('error', function (error) {
+    throw error;
+  });
