@@ -25,16 +25,18 @@ if ( $$$env === 'development' ) {
     bootstrap:        '../bower_components/bootstrap/docs/assets/js/bootstrap',
     angular:          '../bower_components/angular/angular',
     angularUIRouter:  '../bower_components/angular-ui-router/release/angular-ui-router',
-    socketIOClient:   '../bower_components/socket.io-client/dist/socket.io'
+    socketIOClient:   '../bower_components/socket.io-client/dist/socket.io',
+    app:              './app'
   };
 }
 else if ( $$$env === 'production' ) {
   config.paths = {
-    jquery:           './vendor/jquery/jquery.min',
-    bootstrap:        './vendor/bootstrap//bootstrap.min',
-    angular:          './vendor/angular/angular.min',
-    angularUIRouter:  './vendor/angular-ui/angular-ui-router.min',
-    socketIOClient:   './vendor/socket.io/socket.io.min'
+    jquery:           './vendor/jquery/js/jquery.min',
+    bootstrap:        './vendor/bootstrap/js/bootstrap.min',
+    angular:          './vendor/angular/js/angular.min',
+    angularUIRouter:  './vendor/angular-ui/js/angular-ui-router.min',
+    socketIOClient:   './vendor/socket.io/js/socket.io.min',
+    app:              './app.min'
   };
 }
 else {

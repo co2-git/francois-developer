@@ -12,10 +12,20 @@
 			"boot" : true
 		}
 	},
+	"ast": {
+      "build": {
+        "app": {
+          "css": true,
+          "vendor": true
+        },
+        "ast": true
+      }
+    },
 	"vendors": {
 		"bootstrap": {
 			"less": {
-				"bootstrap": true
+				"bootstrap": true,
+				"bootstrap-responsive": "responsive"
 			},
 			
 			"images": {
@@ -27,6 +37,10 @@
 				"$path": "docs/assets/js",
 				"bootstrap": true
 			}
+		},
+
+		"requirejs": {
+			"minjs": "require"
 		},
 		
 		"jquery": {
