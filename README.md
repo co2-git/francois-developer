@@ -5,8 +5,6 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
 
 # Install
 
-This will also install bower dependencies.
-
 ## Global
 
 	npm install git+https://github.com/co2-git/francois-developer.git -g

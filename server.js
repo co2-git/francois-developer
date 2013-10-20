@@ -1,7 +1,8 @@
-var env = process.env.npm_config_env;
+var env = process.env.npm_config_env,
+  json = require('./package.json');
 
 if ( ! env ) {
-	env = require('./package.json').config.env;
+	env = json.config.env;
 }
 
 require('./main')('start', { env: env })
@@ -10,4 +11,8 @@ require('./main')('start', { env: env })
   })
   .on('error', function (error) {
     throw error;
+  })
+  .on('done', function (done) {
+    console.log();
+    console.log(('francois-dev v' + json.version).grey);
   });
