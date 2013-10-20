@@ -16,7 +16,7 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
 
 # Build
 
-Builds the code for production (compiling LESS files). *Note*: this is done by default before starting the server for production.
+Builds the code for production.
 
     npm run build    
 
