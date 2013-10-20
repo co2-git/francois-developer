@@ -44,7 +44,11 @@
 		},
 		
 		"jquery": {
-			"copyminjs": true
+			"copyminjs": {
+				"jquery": {
+					"map": true
+				}
+			}
 		},
 
 		"angular": {

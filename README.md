@@ -7,7 +7,7 @@ A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.2
     
     npm install git+https://github.com/co2-git/francois-developer.git
     cd ~/node_modules/francois-dev
-    npm run-script build
+    npm run build
 
 # Uninstall
 

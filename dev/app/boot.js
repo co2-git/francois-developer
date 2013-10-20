@@ -45,14 +45,14 @@ else {
 
 requirejs.config(config);
 
-requirejs( ['bootstrap',  'angular',  'socketIOClient'],
-  function (bootstrap,    angular,    socketIO) {
+requirejs( ['angular',  'socketIOClient'],
+  function (angular,    socketIO) {
     'use strict';
     
     window.socket = io.connect('http://localhost:3100');
 
-    requirejs([ 'angularUIRouter',  'app'],
-      function (ngUIRouter,         app) {
+    requirejs([ 'bootstrap',  'angularUIRouter',  'app'],
+      function (bootstrap,    ngUIRouter,         app) {
         window.app = app;
         angular.bootstrap(document, [app.name]);
       });
