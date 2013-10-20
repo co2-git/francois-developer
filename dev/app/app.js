@@ -63,6 +63,7 @@ define(['angular', 'controllers/assets', 'controllers/projects', 'controllers/pr
           function ($rootScope,   $state,   $stateParams, $http) {
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
+
             $rootScope.goTo = function (to) {
               location.hash = '/' + to;
             };
