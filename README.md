@@ -10,10 +10,13 @@ This will also install bower dependencies.
 ## Global
 
 	npm install git+https://github.com/co2-git/francois-developer.git -g
+    francois-dev build
 
 ## Local
+    
     npm install git+https://github.com/co2-git/francois-developer.git
-
+    cd ~/node_modules/francois-dev
+    npm run-script build
 
 # Uninstall
 
@@ -23,6 +26,7 @@ This will also install bower dependencies.
 
 ## Local
 
+    cd ~/node_modules
     npm uninstall francois-dev
 
 # Build
