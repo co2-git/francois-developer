@@ -51,7 +51,7 @@ To update your `node` dependencies or your `bower` dependencies, do as usual:
 
 Return current version.
 
-    npm run version
+    npm version | grep francois-dev
 
 # Help
 
