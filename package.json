@@ -32,6 +32,7 @@
     "path": "./bin/francois-dev.js path",
     "build": "./bin/francois-dev.js build",
     "status": "./bin/francois-dev.js status",
-    "stop": "./bin/francois-dev.js stop"
+    "stop": "./bin/francois-dev.js stop",
+    "live-update": "./bin/francois-dev.js live-update"
   }
 }
