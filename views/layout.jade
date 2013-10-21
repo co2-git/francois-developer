@@ -1,4 +1,5 @@
 !!! 5
+// View source at https://github.com/co2-git/francois-developer
 meta(charset='utf-8')
 
 title(data-ng-bind='"/francois/ " + $state.current.name') /francois/
@@ -33,10 +34,13 @@ section.navbar.navbar-inverse.container
       div.nav-collapse
         ul.nav
           li(data-ng-class="{ active: $state.includes('assets') }")
-            a(href='/#/assets') assets
+            a(href='/#/assets') Assets
           li.divider-vertical
           li(data-ng-class="{ active: $state.includes('projects') }")
-            a(href='/#/projects') projects
+            a(href='/#/projects') Projects
+          li.divider-vertical
+          li
+            a(href='https://github.com/co2-git/francois-developer', target="_blank") Fork me on GitHub
           li.divider-vertical
         //
           ul.nav.pull-right
@@ -56,6 +60,8 @@ footer.container
   p.muted 
     span version 
     span(data-ng-bind="version")
+  p
+    a(href='https://github.com/co2-git/francois-developer', target="_blank") Fork me on GitHub
 
 // Bootstrap error modal
 section.modal.hide.fade#modal-error
@@ -75,3 +81,4 @@ if env === 'development'
   script(data-main='/dev/app/boot', src='dev/bower_components/requirejs/require.js')
 else if env === 'production'
   script(data-main='/app/boot.min', src='/app/vendor/requirejs/js/requirejs.min.js')
+// View source at https://github.com/co2-git/francois-developer
