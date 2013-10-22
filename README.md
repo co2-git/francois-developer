@@ -26,6 +26,8 @@ Builds the code for production.
 
 # Start for production
 
+This will start server for production. Don't forget to run `npm run build` before to make sure all your prod files are up-to-date.
+
     npm --env=production start
 
 # Stop http-server
