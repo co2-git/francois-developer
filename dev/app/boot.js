@@ -8,6 +8,16 @@ if ( typeof $$$version === 'undefined' ) {
   throw new Error('Missing version');
 }
 
+if ( document.getElementById('loading-html5') ) {
+  document.getElementById('loading-html5').className =
+    document.getElementById('loading-html5').className + ' hide';
+
+    if ( document.getElementById('booting-up-app') ) {
+      document.getElementById('booting-up-app').className =
+        document.getElementById('booting-up-app').className.replace(/hide/, '');
+    }
+}
+
 var config = {
   shim: {
     'angular' : {'exports' : 'angular'},
@@ -53,6 +63,9 @@ requirejs( ['angular',  'socketIOClient'],
 
     requirejs([ 'bootstrap',  'angularUIRouter',  'app'],
       function (bootstrap,    ngUIRouter,         app) {
+        $('#booting-up-app').addClass('hide');
+        $('#loading-ng').removeClass('hide');
+
         window.app = app;
         angular.bootstrap(document, [app.name]);
       });
