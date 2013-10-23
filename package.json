@@ -1,11 +1,10 @@
 {
   "name": "francois-dev",
-  "version": "0.0.18-rc1",
+  "version": "0.0.18-rc2",
   "author": "francoisrvespa@gmail.com",
-  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/co2-git/datahop"
+    "url": "https://github.com/co2-git/francois-developer"
   },
   "bin": "./bin/francois-dev.js",
   "main": "main",
