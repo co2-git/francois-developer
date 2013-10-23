@@ -5,12 +5,20 @@ require('colors');
 var main = require('../main');
 var action = process.argv[2];
 var json = require('../package.json');
+var config = {};
+var regex = /^npm_config_app_(.+)$/;
 
 if ( ! action ) {
 	action = 'help';
 }
 
-main(action)
+for ( var k in process.env ) {
+  if ( regex.test(k) ) {
+    config[k.replace(regex, '$1')] = process.env[k];
+  }
+}
+
+main(action, config)
   .on('message', function (message) {
     console.log(message);
   })

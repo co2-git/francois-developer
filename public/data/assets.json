@@ -114,5 +114,13 @@
   "forever": {
     "experience": 1,
     "category": "Project deployment"
+  },
+  "jira admin": {
+    "experience": 1,
+    "category": "Project Management"
+  },
+  "amazon ec2": {
+    "experience": 5,
+    "category": "System Admin"
   }
 }
