@@ -52,5 +52,16 @@
 		"role": "Developer",
 		"assets": ["git", "bitbucket", "jquery", "javascript", "html5", "css3", "angular",
 			"jira", "jira agile", "nodejs", "express"]
+	},
+	"undisclosed_2": {
+		"about": "Consulting",
+		"role": "Consultant",
+		"assets": ["jira", "jira admin", "amazon ec2", "Google Migration"]
+	},
+	"lib-import": {
+		"about": "Node module",
+		"role": ["CTO", "Project Manager", "Developer", "Designer"],
+		"assets": ["git", "github", "node", "events"],
+		"source": "https://github.com/co2-git/lib-import"
 	}
 }
