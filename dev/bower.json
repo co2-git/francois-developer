@@ -6,6 +6,7 @@
     "requirejs": "~2.1.5",
     "angular": "~1.0.5",
     "angular-ui-router": "~0.0.1",
-    "socket.io-client": "~0.9.16"
+    "socket.io-client": "~0.9.16",
+    "less.js": "~1.5.0"
   }
 }

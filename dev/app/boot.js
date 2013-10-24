@@ -30,14 +30,36 @@ var config = {
 
 if ( $$$env === 'development' ) {
   config.urlArgs = 'v=' + $$$version;
+  
   config.paths = {
     jquery:           '../bower_components/jquery/jquery',
     bootstrap:        '../bower_components/bootstrap/docs/assets/js/bootstrap',
     angular:          '../bower_components/angular/angular',
     angularUIRouter:  '../bower_components/angular-ui-router/release/angular-ui-router',
     socketIOClient:   '../bower_components/socket.io-client/dist/socket.io',
+    lessJS:           '../bower_components/less.js/dist/less-1.5.0',
     app:              './app'
   };
+
+  requirejs.config(config);
+
+  requirejs( ['angular',  'socketIOClient', 'lessJS'],
+    function (angular,    socketIO,         lessJS) {
+      'use strict';
+      
+      window.socket = io.connect('http://localhost:3100');
+
+      requirejs([ 'bootstrap',  'angularUIRouter',  'app'],
+        function (bootstrap,    ngUIRouter,         app) {
+          
+          $('#booting-up-app').addClass('hide');
+          $('#loading-ng').removeClass('hide');
+
+          window.app = app;
+          
+          angular.bootstrap(document, [app.name]);
+        });
+  });
 }
 else if ( $$$env === 'production' ) {
   config.paths = {
@@ -48,25 +70,27 @@ else if ( $$$env === 'production' ) {
     socketIOClient:   './vendor/socket.io/js/socket.io.min',
     app:              './app.min'
   };
+
+  requirejs.config(config);
+
+  requirejs( ['angular',  'socketIOClient'],
+    function (angular,    socketIO) {
+      'use strict';
+      
+      window.socket = io.connect('http://localhost:3100');
+
+      requirejs([ 'bootstrap',  'angularUIRouter',  'app'],
+        function (bootstrap,    ngUIRouter,         app) {
+          
+          $('#booting-up-app').addClass('hide');
+          $('#loading-ng').removeClass('hide');
+
+          window.app = app;
+          
+          angular.bootstrap(document, [app.name]);
+        });
+  });
 }
 else {
   throw new Error('Unknown environment: ' + $$$env);
 }
-
-requirejs.config(config);
-
-requirejs( ['angular',  'socketIOClient'],
-  function (angular,    socketIO) {
-    'use strict';
-    
-    window.socket = io.connect('http://localhost:3100');
-
-    requirejs([ 'bootstrap',  'angularUIRouter',  'app'],
-      function (bootstrap,    ngUIRouter,         app) {
-        $('#booting-up-app').addClass('hide');
-        $('#loading-ng').removeClass('hide');
-
-        window.app = app;
-        angular.bootstrap(document, [app.name]);
-      });
-});

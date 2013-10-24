@@ -1,6 +1,6 @@
 {
   "name": "francois-dev",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "author": "francoisrvespa@gmail.com",
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "build": "./bin/francois-dev.js build",
     "status": "./bin/francois-dev.js status",
     "stop": "./bin/francois-dev.js stop",
-    "live-update": "./bin/francois-dev.js live-update"
+    "live-update": "./bin/francois-dev.js live-update",
+    "start": "./bin/francois-dev.js start"
   }
 }

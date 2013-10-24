@@ -12,7 +12,7 @@ link(rel='version', content='' + about.version)
 if env === 'development'
   link(rel='stylesheet', href='/dev/bower_components/bootstrap/docs/assets/css/bootstrap.css')
   link(rel='stylesheet', href='/dev/bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css')
-  link(rel='stylesheet', href='/dev/css/main.css')
+  link(rel='stylesheet/less', href='/dev/less/main.less')
 else if env === 'production'
   link(rel='stylesheet', href='/app/vendor/bootstrap/css/bootstrap.min.css')
   link(rel='stylesheet', href='/app/vendor/bootstrap/css/bootstrap-responsive.min.css')
