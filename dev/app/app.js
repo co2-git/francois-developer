@@ -1,14 +1,13 @@
-define(['angular', 'controllers/assets', 'controllers/projects', 'controllers/project',
+define(['angular', 'angularUIRouter', 'controllers/assets', 'controllers/projects', 'controllers/project',
   'controllers/asset'],
 
-  function (angular, assetsCtrl, projectsCtrl, projectCtrl, assetCtrl) {
+  function (angular, ngRouter, assetsCtrl, projectsCtrl) {
     'use strict';
 
-    return angular.module('datahop', ['ui.compat'])
-      .config(['$stateProvider',  '$routeProvider', '$urlRouterProvider',
-        function ($stateProvider, $routeProvider,   $urlRouterProvider) {
+    return angular.module('francois-developer-ng', ['ui.router'])
+      .config(['$stateProvider',  '$urlRouterProvider',
+        function ($stateProvider, $urlRouterProvider) {
           $stateProvider
-
             .state('home', {
               url: '',
               views: {
@@ -17,7 +16,6 @@ define(['angular', 'controllers/assets', 'controllers/projects', 'controllers/pr
                 }
               }
             })
-
             .state('assets', {
               url: '/assets',
               views: {
@@ -27,17 +25,15 @@ define(['angular', 'controllers/assets', 'controllers/projects', 'controllers/pr
                 }
               }
             })
-
             .state('asset', {
               url: '/assets/:asset',
               views: {
-                page: {
-                  templateUrl: '/partials/asset',
-                  controller: assetCtrl
-                }
+                // page: {
+                //   templateUrl: '/partials/asset',
+                //   controller: assetCtrl
+                // }
               }
             })
-
             .state('projects', {
               url: '/projects',
               views: {
@@ -47,14 +43,22 @@ define(['angular', 'controllers/assets', 'controllers/projects', 'controllers/pr
                 }
               }
             })
-
             .state('project', {
               url: '/projects/:project',
               views: {
-                page: {
-                  templateUrl: '/partials/project',
-                  controller: projectCtrl
-                }
+                // page: {
+                //   templateUrl: '/partials/project',
+                //   controller: projectCtrl
+                // }
+              }
+            })
+            .state('build', {
+              url: '/build',
+              views: {
+                // page: {
+                //   templateUrl: '/partials/build',
+                //   controller: projectCtrl
+                // }
               }
             });
         }])

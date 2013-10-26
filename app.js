@@ -1,43 +1,48 @@
-var express = require('express'),
-  app = express(),
-  http = require('http'),
-  path = require('path'),
-  io = require('socket.io'),
-  fs = require('fs'),
-  packagejson = require('./package.json'),
-  isDev = app.get('env') === 'development';
+var express   = require('express'),         // the Express Framework
+  app         = express(),                  // the App
+  http        = require('http'),            // the HTTP module
+  path        = require('path'),            // the Path module
+  io          = require('socket.io'),       // Socket.io
+  fs          = require('fs'),              // File System module
+  packagejson = require('./package.json'),  // package.json
+  env         = app.get('env');             // environment
 
-// all environments
+// The method to handle error for end-user in production
+function onErrorForEndUser (err, req, res, next){
+  console.error(err.stack);
+  res.render('error', { about: packagejson, env: app.get('env') });
+}
+
+// Port
 app.set('port', + process.env.PORT || 3100);
-
+// Views directory
 app.set('views', __dirname + '/views');
+// View engine
 app.set('view engine', 'jade');
-if ( isDev ) {
+// Favicon
+app.use(express.favicon());
+// Logger
+app.use(express.logger('dev'));
+// Parser ??
+app.use(express.bodyParser());
+// Override HTTP methods
+app.use(express.methodOverride());
+// Use default router
+app.use(app.router);
+// Set static directory
+app.use(express.static(path.join(__dirname, 'public')));
+// development only
+if ( env === 'development' ) {
+  // Error handling - maximum verbosity
+  app.use(express.errorHandler());
+  // Print nice HTML source
   app.locals.pretty = true;
 }
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-
-
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
-
-// development only
-if ( isDev ) {
-  app.use(express.errorHandler());
+// production only
+if ( env === 'production' ) {
+  // Error handling for end-user
+  app.use(onErrorForEndUser);
 }
-
-app.use(function (err, req, res, next) {
-  function clientErrorHandler(err, req, res, next) {
-    if (req.xhr) {
-      res.send(500, { error: 'Something blew up!' });
-    } else {
-      next(err);
-    }
-  }
-});
 
 // Routes: INDEX
 app.get('/', function getIndex (req, res) {
@@ -53,7 +58,7 @@ app.get('/', function getIndex (req, res) {
 
 // Routes: PARTIALS
 app.get('/partials/:partial', function getPartial (req, res) {
-  res.render(req.params.partial, {});
+  res.render(req.params.partial, { about: packagejson, env: app.get('env') });
 });
 
 // Launch server

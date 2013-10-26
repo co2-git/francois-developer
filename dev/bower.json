@@ -4,8 +4,10 @@
   "dependencies": {
     "bootstrap": "~2.3.1",
     "requirejs": "~2.1.5",
-    "angular": "~1.0.5",
-    "angular-ui-router": "~0.0.1",
-    "socket.io-client": "~0.9.16"
+    "angular": "1.2.0-rc.1",
+    "angular-unstable": "1.1.5",
+    "angular-ui-router": "~0.2.0",
+    "socket.io-client": "~0.9.16",
+    "less.js": "~1.5.0"
   }
 }
