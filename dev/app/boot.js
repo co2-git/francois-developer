@@ -21,6 +21,9 @@ if ( document.getElementById('loading-html5') ) {
 var config = {
   shim: {
     'angular' : {'exports' : 'angular'},
+    'angularUIRouter':{
+      deps: ['angular']
+    },
     'bootstrap': {deps:['jquery']}
   },
   priority: [
@@ -34,7 +37,7 @@ if ( $$$env === 'development' ) {
   config.paths = {
     jquery:           '../bower_components/jquery/jquery',
     bootstrap:        '../bower_components/bootstrap/docs/assets/js/bootstrap',
-    angular:          '../bower_components/angular/angular',
+    angular:          '../bower_components/angular-unstable/angular',
     angularUIRouter:  '../bower_components/angular-ui-router/release/angular-ui-router',
     socketIOClient:   '../bower_components/socket.io-client/dist/socket.io',
     lessJS:           '../bower_components/less.js/dist/less-1.5.0',
@@ -49,8 +52,8 @@ if ( $$$env === 'development' ) {
       
       window.socket = io.connect('http://localhost:3100');
 
-      requirejs([ 'bootstrap',  'angularUIRouter',  'app'],
-        function (bootstrap,    ngUIRouter,         app) {
+      requirejs([ 'bootstrap',  'app'],
+        function (bootstrap,    app) {
           
           $('#booting-up-app').addClass('hide');
           $('#loading-ng').removeClass('hide');

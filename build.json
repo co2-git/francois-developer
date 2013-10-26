@@ -51,8 +51,10 @@
 			}
 		},
 
-		"angular": {
-			"copyminjs": true
+		"angular-unstable": {
+			"copyminjs": {
+				"angular": "angular"
+			}
 		},
 
 		"angular-ui": {
