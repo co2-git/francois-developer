@@ -1,0 +1,48 @@
+section.container
+  header.hero-unit
+    h1 Source
+    p
+
+  div.tabbable.tabs-left
+    ul.nav.nav-tabs
+      li.active
+        a(href='#node', data-toggle='tab') Node
+      li
+        a(href='#bower', data-toggle='tab') Bower
+      li
+        a(href='#vows', data-toggle='tab') Vows
+      li
+        a(href='#build', data-toggle='tab') Built
+      li
+        a(href='#server', data-toggle='tab') Server
+    div.tab-content
+      div.tab-pane.active#node
+        h2 Node
+        table.table.table-striped.table-hover
+          thead
+            tr
+              td Module
+              td Version
+          tbody
+
+      div.tab-pane#bower
+        h2 Bower
+        table.table.table-striped.table-hover
+          thead
+            tr
+              td Module
+              td Version
+          tbody
+
+      div.tab-pane#vows
+        h2 Vows
+
+      div.tab-pane#build
+        h2 Built
+
+      div.tab-pane#server
+        h2 Server
+        table.table.table-striped.table-hover
+          tbody
+            th Environment
+            td= env

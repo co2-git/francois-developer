@@ -1,7 +1,7 @@
 francois-developer
 ==================
 
-A small HTML5 web app to showcase my skills to recruiters. <a href="http://192.237.218.147:3100" target="_blank">Check it out live</a>.
+A small HTML5 web app to showcase my skills to recruiters. <a href="http://francois-dev.no-ip.biz" target="_blank">Check it out live</a>.
 
 # Install
     

@@ -1,1 +1,1 @@
-module.exports = require('lib-import').setPath(__dirname + '/lib/');
+module.exports = require('lib-import').$$setPath(__dirname + '/lib/');
