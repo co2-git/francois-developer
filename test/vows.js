@@ -4,14 +4,14 @@
 var vows = require('vows'),
     assert = require('assert'),
     path = require('path'),
-    main = require('lib-import').setPath(path.dirname(__dirname)),
+    main = require('../main'),
     json = require('../package.json');
 
 // Create a Test Suite
 vows.describe('Library test').addBatch({
   'When getting help': {
     topic: function () {
-      return main('lib/help');
+      return main('help');
     },
 
     'it should not return an error': function (err, help) {
@@ -31,7 +31,7 @@ vows.describe('Library test').addBatch({
 
   'When getting version': {
     topic: function () {
-      return main('lib/version');
+      return main('version');
     },
 
     'it should not return an error': function (err, version) {
@@ -53,7 +53,7 @@ vows.describe('Library test').addBatch({
 
   'When getting path': {
     topic: function () {
-      return main('lib/path');
+      return main('path');
     },
 
     'it should not return an error': function (err, $path) {
