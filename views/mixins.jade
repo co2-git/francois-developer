@@ -43,6 +43,8 @@ mixin navbar()
               a(href='/#/assets', title="Tools & technologies I know") Assets
             li(data-ng-class="{ active: $state.includes('projects') }")
               a(href='/#/projects', title='Projects I am collaborating to') Projects
+            li(data-ng-class="{ active: $state.includes('source') }")
+              a(href='/#/source', title='Open source') Source
 
 mixin uiView()
   // Main content
@@ -50,10 +52,7 @@ mixin uiView()
     div.progress.progress-striped.active
       div.bar(style='width:40%')
     div.text-center.loading
-      div.muted#loading-html5 Loading HTML5
-      div.muted.hide#booting-up-app Fetching dependencies
-      div.muted.hide#loading-ng Setting up Angular
-      div.muted.hide#ready Ready to party
+      div.muted#loading-verbose Loading HTML5
 
 mixin footer()
   // footer

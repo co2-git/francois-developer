@@ -1,7 +1,5 @@
-define(['angular', 'angularUIRouter', 'controllers/assets', 'controllers/projects', 'controllers/project',
-  'controllers/asset'],
-
-  function (angular, ngRouter, assetsCtrl, projectsCtrl) {
+define(['controllers/assets', 'controllers/projects'],
+  function (assetsCtrl, projectsCtrl) {
     'use strict';
 
     return angular.module('francois-developer-ng', ['ui.router'])
@@ -13,6 +11,14 @@ define(['angular', 'angularUIRouter', 'controllers/assets', 'controllers/project
               views: {
                 page: {
                   templateUrl: '/partials/home'
+                }
+              }
+            })
+            .state('source', {
+              url: '/source',
+              views: {
+                page: {
+                  templateUrl: '/partials/source'
                 }
               }
             })

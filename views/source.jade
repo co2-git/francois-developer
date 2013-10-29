@@ -1,0 +1,32 @@
+section.container
+  header.hero-unit
+    h1 Source
+    p
+
+  div.tabbable.tabs-left
+    ul.nav.nav-tabs
+      li.active
+        a(href='/#/', data-toggle='tab') Node
+      li
+        a(href='/#/', data-toggle='tab') Bower
+      li
+        a(href='/#/', data-toggle='tab') Vows
+      li
+        a(href='/#/', data-toggle='tab') Built
+      li
+        a(href='/#/', data-toggle='tab') Env
+    div.tab-content
+      div.tab-pane.active
+        h2 Node
+        table.table.table-striped.table-hover
+          thead
+            tr
+              td Module
+              td Version
+          tbody
+            tr
+              td node
+              td 0.10.15
+            tr
+              td express
+              td 3.3.*

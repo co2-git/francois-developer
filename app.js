@@ -61,6 +61,11 @@ app.get('/partials/:partial', function getPartial (req, res) {
   res.render(req.params.partial, { about: packagejson, env: app.get('env') });
 });
 
+// Routes: PARTIALS
+app.get('/error', function getPartial (req, res) {
+  res.render('fatal-error', { about: packagejson, env: app.get('env') });
+});
+
 // Launch server
 var server = http.createServer(app);
 

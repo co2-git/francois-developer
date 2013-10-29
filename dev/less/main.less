@@ -82,6 +82,7 @@ form {
 
 .navbar-inner {
   .gradient(top, rgba(0, 0, 0, .8), rgba(68, 68, 68, .8)) !important;
+  // .gradient(bottom, rgba(5, 1, 50, .8), rgba(103, 48, 81, .8)) !important;
 }
 
 .nav-collapse li {
@@ -95,6 +96,7 @@ form {
   padding-top: 12px !important;
   padding-bottom: 12px !important;
   color: #aaa !important;
+  text-shadow: 1px 1px 1px #000 !important;
 
   &:hover {
     color:#fff !important;
@@ -103,11 +105,19 @@ form {
 
 .nav-collapse li.active a {
   color: #000 !important;
+  text-shadow: none !important;
   .gradient(bottom, rgba(153, 153, 153, .8), rgba(204, 204, 204, .8));
 }
 
 .hero-unit {
-  // .gradient(bottom, rgba(153, 153, 153, .8), rgba(204, 204, 204, .8));
+  // .gradient(right, rgba(5, 1, 50, .8), rgba(103, 48, 81, .8));
+  // .gradient(left, rgba(164, 192, 209, .4), rgba(108, 142, 162, .4)) !important;
+  // background: #fff;
+  // text-shadow: 1px 1px 1px #000;
+}
+
+.hero-unit h1 {
+  // text-shadow:1px 1px 1px #000, 12px 12px 17px rgba(103, 48, 81, 1);
 }
 
 #forkongithub {
@@ -116,7 +126,7 @@ form {
 
 //http://codepo8.github.io/css-fork-on-github-ribbon/
 #forkongithub a {
-  background:#000;
+  background:#301B45;
   color:#fff;
   text-decoration:none;
   font-family:arial, sans-serif;
@@ -152,19 +162,20 @@ form {
 
 @media screen and (min-width:980px){
   #forkongithub {
-    position:absolute;
-    display:block;
-    top:0;
-    right:0;
-    width:200px;
-    overflow:hidden;
-    height:200px;
+    // position:absolute;
+    // display:block;
+    // top:0;
+    // right:0;
+    // width:200px;
+    // overflow:hidden;
+    // height:200px;
+    // z-index:10;
 
     a {
       width:200px;
-      position:absolute;
-      top:60px;
-      right:-60px;
+      float:right;
+      top:0;
+      right:-40px;
       transform:rotate(45deg);
       -webkit-transform:rotate(45deg);
       box-shadow:4px 4px 10px rgba(0,0,0,0.8);
@@ -230,10 +241,10 @@ form {
 
 
 .wave-enter, .wave-leave {
-    -webkit-transition:all 3s;
-    -moz-transition:all 3s;
-    -o-transition:all 3s;
-    transition:all 3s;
+    -webkit-transition:all 7s;
+    -moz-transition:all 7s;
+    -o-transition:all 7s;
+    transition:all 7s;
 }
 .wave-enter {
     border: 5px solid red;
