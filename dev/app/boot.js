@@ -48,7 +48,7 @@
   var vendors = {
     angular: {
       development: 'angular-unstable/angular',
-      production: 'angular/js/angular.min'
+      production: 'angular-unstable/js/angular.min'
     },
     socketio: {
       development: 'socket.io-client/dist/socket.io',
