@@ -1,5 +1,5 @@
-define(['controllers/assets', 'controllers/projects'],
-  function (assetsCtrl, projectsCtrl) {
+define(['controllers/assets', 'controllers/projects', 'controllers/asset', 'controllers/project'],
+  function (assetsCtrl, projectsCtrl, assetCtrl, projectCtrl) {
     'use strict';
 
     return angular.module('francois-developer-ng', ['ui.router'])
@@ -34,10 +34,10 @@ define(['controllers/assets', 'controllers/projects'],
             .state('asset', {
               url: '/assets/:asset',
               views: {
-                // page: {
-                //   templateUrl: '/partials/asset',
-                //   controller: assetCtrl
-                // }
+                page: {
+                  templateUrl: '/partials/asset',
+                  controller: assetCtrl
+                }
               }
             })
             .state('projects', {
@@ -52,19 +52,10 @@ define(['controllers/assets', 'controllers/projects'],
             .state('project', {
               url: '/projects/:project',
               views: {
-                // page: {
-                //   templateUrl: '/partials/project',
-                //   controller: projectCtrl
-                // }
-              }
-            })
-            .state('build', {
-              url: '/build',
-              views: {
-                // page: {
-                //   templateUrl: '/partials/build',
-                //   controller: projectCtrl
-                // }
+                page: {
+                  templateUrl: '/partials/project',
+                  controller: projectCtrl
+                }
               }
             });
         }])
