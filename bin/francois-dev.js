@@ -19,7 +19,7 @@ for ( var k in process.env ) {
 }
 
 main(action, config)
-  .on('message', console.error)
+  .on('message.cli', console.error)
 
   .on('error', function (error) {
     throw error;
