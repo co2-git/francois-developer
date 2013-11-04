@@ -71,6 +71,10 @@ define(['controllers/assets', 'controllers/projects', 'controllers/asset', 'cont
 
             $rootScope.version = $('link[rel=version]').attr('content');
 
+            $rootScope.animate = function () {
+              console.log('lol');
+            };
+
             socket.emit('client ready');
 
             socket.on('version', function (version) {

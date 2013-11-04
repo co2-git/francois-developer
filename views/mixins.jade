@@ -17,6 +17,7 @@ mixin meta()
     link(rel='stylesheet',
       href='/dev/bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css')
     link(rel='stylesheet/less', href='/dev/less/main.less')
+  
   else if env === 'production'
     link(rel='stylesheet', href='/app/vendor/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/app/vendor/bootstrap/css/bootstrap-responsive.min.css')
@@ -48,7 +49,7 @@ mixin navbar()
 
 mixin uiView()
   // Main content
-  section.container(ui-view='page', ng-animate=" 'view' ")
+  section.container(data-ui-view='page', data-ng-animate="'animate'")
     div.progress.progress-striped.active
       div.bar(style='width:40%')
     div.text-center.loading
